@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="C:\Users\praptioza\Desktop\Task-mngmnt-App/Style.css" />
+    <link rel="stylesheet" href="./Styles.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -23,17 +23,30 @@
       <button
         class="btn btn-primary float-right"
         data-bs-toggle="modal"
-        data-bs-target="#addNewModal">
+        data-bs-target="#addNewModal"
+      >
         <i class="fas fa-plus mr-2"></i>Add new
       </button>
-  
-    <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+    </div>
+    <div
+      class="modal fade"
+      id="addNewModal"
+      tabindex="-1"
+      aria-labelledby="addNewModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="addNewModalLabel">Add New Task</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >
-              <i class="fas fa-times"></i></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times"></i>
+            </button>
           </div>
           <div class="modal-body">
             <form onsubmit="return false">
@@ -43,7 +56,8 @@
                   type="url"
                   class="form-control"
                   id="imageUrl"
-                  placeholder="http://example.com/image.png"/>
+                  placeholder="http://example.com/image.png"
+                />
               </div>
               <div class="mb-3">
                 <label for="taskTitle" class="form-label">Task Title</label>
@@ -51,8 +65,9 @@
                   type="text"
                   class="form-control"
                   id="taskTitle"
-                  placeholder="WEB DEVELOPMENT"
-                  required/>
+                  placeholder="Learn Web Dev"
+                  required
+                />
               </div>
               <div class="mb-3">
                 <label for="Tags" class="form-label">Task Type</label>
@@ -60,35 +75,49 @@
                   type="text"
                   class="form-control"
                   id="Tags"
-                  placeholder="STUDY"
-                  required/>
+                  placeholder="Work.."
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label for="taskDescription" class="form-label">Task Description</label>
+                <label for="taskDescription" class="form-label"
+                  >Task Description</label
+                >
                 <textarea
                   class="form-control"
                   id="taskDescription"
                   placeholder="http://example.com/image.png"
                   rows="4"
-                  required></textarea>
+                  required
+                ></textarea>
               </div>
               <button
                 type="button"
                 class="btn btn-secondary"
-                data-bs-dismiss="modal">Close</button>
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
               <button
                 type="submit"
                 class="btn btn-primary"
                 onclick="handlesubmit()"
-                data-bs-dismiss="modal">Save changes</button>
+                data-bs-dismiss="modal"
+              >
+                Save changes
+              </button>
             </form>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="modal fade" id="showTask" tabindex="-1"
-      aria-labelledby="showTaskLabel" aria-hidden="true">
+      class="modal fade"
+      id="showTask"
+      tabindex="-1"
+      aria-labelledby="showTaskLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-body task__modal__body"></div>
@@ -96,7 +125,10 @@
             <button
               type="button"
               class="btn btn-secondary"
-              data-bs-dismiss="modal">Close</button>
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -113,7 +145,8 @@
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -125,8 +158,10 @@
           <button
             class="btn btn-primary ml-auto"
             data-bs-toggle="modal"
-            data-bs-target="#addNewModal">
-            <i class="fas fa-plus mr-2"></i>Add new</button>
+            data-bs-target="#addNewModal"
+          >
+            <i class="fas fa-plus mr-2"></i>Add new
+          </button>
         </div>
       </div>
     </nav>
@@ -141,8 +176,8 @@
                 placeholder="Search Task"
                 aria-label="Search Task"
                 aria-describedby="addon-wrapping"
-                onchange="searchTask.apply(this, arguments)"/>
-                <span class="input-group-text" id="addon-wrapping">
+                onchange="searchTask.apply(this, arguments)"
+              /><span class="input-group-text" id="addon-wrapping">
                 <i class="fas fa-search"></i>
               </span>
             </div>
@@ -154,11 +189,12 @@
         <div class="row task__contents"></div>
       </section>
     </div>
-    <script src="C:\Users\praptioza\Desktop\Task-mngmnt-App/Index.js"></script>
+    <script src="./Index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
       
