@@ -11,20 +11,17 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
   </head>
   <body onload="loadInitialData()">
     <div class="add__new__btn__modile__only">
       <button
         class="btn btn-primary float-right"
         data-bs-toggle="modal"
-        data-bs-target="#addNewModal"
-      >
+        data-bs-target="#addNewModal">
         <i class="fas fa-plus mr-2"></i>Add new
       </button>
     </div>
@@ -33,8 +30,7 @@
       id="addNewModal"
       tabindex="-1"
       aria-labelledby="addNewModalLabel"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -43,8 +39,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
-            >
+              aria-label="Close">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -56,8 +51,7 @@
                   type="url"
                   class="form-control"
                   id="imageUrl"
-                  placeholder="http://example.com/image.png"
-                />
+                  placeholder="http://example.com/image.png"/>
               </div>
               <div class="mb-3">
                 <label for="taskTitle" class="form-label">Task Title</label>
@@ -66,8 +60,7 @@
                   class="form-control"
                   id="taskTitle"
                   placeholder="Learn Web Dev"
-                  required
-                />
+                  required/>
               </div>
               <div class="mb-3">
                 <label for="Tags" class="form-label">Task Type</label>
@@ -76,34 +69,29 @@
                   class="form-control"
                   id="Tags"
                   placeholder="Work.."
-                  required
-                />
+                  required/>
               </div>
               <div class="mb-3">
                 <label for="taskDescription" class="form-label"
-                  >Task Description</label
-                >
+                  >Task Description</label>
                 <textarea
                   class="form-control"
                   id="taskDescription"
                   placeholder="http://example.com/image.png"
                   rows="4"
-                  required
-                ></textarea>
+                  required></textarea>
               </div>
               <button
                 type="button"
                 class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+                data-bs-dismiss="modal">
                 Close
               </button>
               <button
                 type="submit"
                 class="btn btn-primary"
                 onclick="handlesubmit()"
-                data-bs-dismiss="modal"
-              >
+                data-bs-dismiss="modal">
                 Save changes
               </button>
             </form>
@@ -116,8 +104,7 @@
       id="showTask"
       tabindex="-1"
       aria-labelledby="showTaskLabel"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-body task__modal__body"></div>
@@ -125,8 +112,7 @@
             <button
               type="button"
               class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+              data-bs-dismiss="modal">
               Close
             </button>
           </div>
@@ -145,8 +131,7 @@
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -158,8 +143,7 @@
           <button
             class="btn btn-primary ml-auto"
             data-bs-toggle="modal"
-            data-bs-target="#addNewModal"
-          >
+            data-bs-target="#addNewModal">
             <i class="fas fa-plus mr-2"></i>Add new
           </button>
         </div>
@@ -176,8 +160,8 @@
                 placeholder="Search Task"
                 aria-label="Search Task"
                 aria-describedby="addon-wrapping"
-                onchange="searchTask.apply(this, arguments)"
-              /><span class="input-group-text" id="addon-wrapping">
+                onchange="searchTask.apply(this, arguments)"/>
+              <span class="input-group-text" id="addon-wrapping">
                 <i class="fas fa-search"></i>
               </span>
             </div>
